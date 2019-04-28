@@ -15,7 +15,7 @@ sits. Otherwise it becomes the very good advice you just can't take. ;
 - [Introduction](#introduction)
 - [Before you start writing](#before-you-start-writing)
 - [Some High-Level Considerations](#some-high-level-considerations)
-- [What to Include in the `AccessibilitySummary`](#what-to-include-in-the--accessibilitysummary-)
+- [What to Include in the `AccessibilitySummary`](#what-to-include-in-the-accessibilitysummary)
 - [Examples](#examples)
 
 

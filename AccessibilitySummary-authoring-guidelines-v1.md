@@ -1,8 +1,8 @@
-# AccessibilitySummary Authoring Guidelines
-
-Last updated April 17, 2019
-
-By George Kerscher
+---
+title: AccessibilitySummary Authoring Guidelines
+author: George Kerscher
+date: April 17, 2019
+...
 
 > Sarah Runcie: Hi all - I do have a comment from the perspective of a
 non-accessibility guru. It would be good to have clearly stated for

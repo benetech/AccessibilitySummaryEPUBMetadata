@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="George Kerscher" />
+  <meta name="dcterms.date" content="2019-04-17" />
+  <title>AccessibilitySummary Authoring Guidelines</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">AccessibilitySummary Authoring Guidelines</h1>
+<p class="author">George Kerscher</p>
+<p class="date">April 17, 2019</p>
+</header>
+<blockquote>
+<p>Sarah Runcie: Hi all - I do have a comment from the perspective of a non-accessibility guru. It would be good to have clearly stated for publishers (or anyone using this as a guide) as to where this metadata sits. Otherwise it becomes the very good advice you just can’t take. ; )</p>
+</blockquote>
+<h2 id="table-of-contents">Table of Contents</h2>
+<ul>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#before-you-start-writing">Before you start writing</a></li>
+<li><a href="#some-high-level-considerations">Some High-Level Considerations</a></li>
+<li><a href="#what-to-include-in-the-accessibilitysummary">What to Include in the <code>AccessibilitySummary</code></a></li>
+<li><a href="#examples">Examples</a></li>
+</ul>
+<h2 id="introduction">Introduction</h2>
+<p>The EPUB Accessibility Conformance and Discovery Specification defines a schema.org metadata term called “accessibilitySummary.” This piece of metadata is extraordinarily unique and important in that it provides a human readable description of the accessibility of the publication. It is expected that people who do not have formal training in HTML, EPUB, or who are not experts in accessibility will be reading the accessibilitySummary. Online Library and retail catalogues should present the accessibilitySummary to assist in making the decision to purchase or recommend the title. Individuals, professors, schools and universities should be basing their decisions to purchase on the accessibility of products.</p>
+<hr />
+<p><strong>Note</strong>: Please refer to the <a href="https://github.com/benetech/UX-Guide-EPUB-A11y-Metadata/blob/master/UXGuideForMetadata.md">Guidelines for discovery and presentation of EPUB Accessibility metadata</a> for libraries and retailers.</p>
+<hr />
+<h2 id="before-you-start-writing">Before you start writing</h2>
+<p>The Accessibility Checker for EPUB (Ace by DAISY) should have been run against the publication, which evaluates the accessibility of the publication. Read the report that Ace generates.</p>
+<p>Madeleine: mention ACE as possible helper but focus on the metadata in the OPF file</p>
+<p>Next read the accessibility metadata in the EPUB package.opf file before you begin to write. Make note of the features listed in the metadata as you prepare to write. One should always truthfully represent the accessibility of the publication and point out shortcomings of the publication; students may be able to get assistance from their school or university if some aspects of the publication are not accessible. For example, if complex graphics that convey information do not have an extended description, let people know that extended descriptions are not available.</p>
+<h2 id="some-high-level-considerations">Some High-Level Considerations</h2>
+<ul>
+<li>Use simple language that communicates effectively to a non-technical and a non-accessibility aware community.</li>
+<li>Avoid terms that are only known in a specific knowledge domain, or explain the term in a simple way.</li>
+<li>Write out the words of the acronym before using the abbreviation, e.g. Web Content Accessibility Guidelines (WCAG).</li>
+<li>Include all accessibility features, even those detailed in another schema.org metadata item; remember that the AccessibilitySummary may be the only piece of metadata that some users read.</li>
+<li>Templates may be a useful approach for creating accessibility summaries in your organization, especially if all the content of a similar type goes through the same workflow and quality assurance process. However, make sure that the <code>accessibilitySummary</code> metadata that ships with the publication is accurate and applies to this particular publication.</li>
+</ul>
+<p>Avneesh: Publishers would also need to know how to interpret accessibility metadata to create <code>accessibilitySummary</code>.</p>
+<h2 id="what-to-include-in-the-accessibilitysummary">What to Include in the <code>AccessibilitySummary</code></h2>
+<blockquote>
+<p>Madeleine: Reformat as a table with 2 columns: metadata text and suggested prose for summary. Third column for links to explanatory notes?</p>
+</blockquote>
+<p>Here is a list of areas that the summary should address :</p>
+<ol type="1">
+<li><p>Screen Reader Friendly: If all the text is present and there is alt text for important images, the <code>accessModeSufficient</code> would say “textual” or the <code>conformsTo</code> level reached will be WCAG-A or greater.</p>
+<ol type="a">
+<li>Include: “This title is screen reader friendly and it will be accessible to a person using text-to-speech or refreshable braille.”</li>
+</ol></li>
+<li><p>Conforms to Accessibility Standards: The publication <code>conformsTo</code> the EPUB accessibility Specification at the WCAG 2 AA or A levels.</p>
+<ol type="a">
+<li>Include: “This publication meets accepted accessibility guidelines, i.e. EPUB 3 and Web Content Accessibility Guidelines (WCAG) at the AA level.” or “at the A level.” as appropriate.</li>
+</ol></li>
+<li><p>Structural navigation through the table of contents: Publications normally provide a structured table of contents. Educational materials often contain nested navigation to parts, chapters, sections, and sub-sections.</p>
+<ol type="a">
+<li><p>Include: “This publication contains a detailed table of contents for navigation through the various chapters and sections.”</p></li>
+<li><p>Include (if it is a simple TOC): “This publication contains access to the chapters through the table of contents.”</p></li>
+</ol></li>
+</ol>
+<blockquote>
+<p>Avneesh::How are we expecting the publisher or distributor to get this information. We should provide a hint that Ace will extract table of content that can be reviewed. The second piece of information is accessibilityfeature metadata, it can have value for table of contents.</p>
+</blockquote>
+<ol start="4" type="1">
+<li><p>Page numbers present: If there is a print equivalent version of this EPUB, the page numbers in the EPUB must be present; they will be navigable through the nav.xhtml (the table of contents).</p>
+<ol type="a">
+<li><p>Include: “Page numbers are present and navigation to pages is supported.”</p></li>
+<li><p>Include (if not present): “This publication does not contain page numbers that can be navigated.”</p></li>
+<li><p>Include (if no print equivalent): “There is no print version of this publication and no page navigation is provided.”</p></li>
+<li><p>Include (if virtual page numbers are present): “There is no print version of this publication, but virtual page numbers are provided for ease of use.”</p></li>
+</ol></li>
+</ol>
+<blockquote>
+<p>Avneesh: First is the confusion between page numbers inside the book and page view provided by the reading system. It should be made clear here.</p>
+</blockquote>
+<blockquote>
+<p>2nd is definition of virtual page numbers. It may be unknown term form some of the audience.</p>
+</blockquote>
+<blockquote>
+<p>3rd is how to interpret if there is a print equivalent, we should inform that there is dc:source metadata for it. Also accessibilityfeature has a value for printPageNumbers.</p>
+</blockquote>
+<ol start="5" type="1">
+<li><p>Extended descriptions: Extended (or long) descriptions are used when complex graphics or other highly visual components convey information. The extended description communicates the equivalent information through text, tables, etc.</p>
+<ol type="a">
+<li><p>Include: “Extended descriptions are provided for complex graphical content that conveys important information for understanding of the content.”</p></li>
+<li><p>Include (if not present): “This publication contains graphical content that conveys significant information. This graphical material is not explained and the reader who cannot interpret the graphics should seek assistance.”</p></li>
+</ol></li>
+<li><p>Accessibility hazards: Some content, especially videos, may contain elements that have been found to be problematic. Most common items are motion effects that make some people motion sick, flashing that can cause severe distractions or even seizures, or loud sharp noises like a gunshot which can cause hearing issues. It is only necessary to include this information if it is present.</p>
+<ol type="a">
+<li><p>Include: “Caution: the video contains flashing lights.”</p></li>
+<li><p>Include: “Caution: the audio contains loud noises.”</p></li>
+<li><p>Include: “Caution: the video has motion, which may affect some people.”</p></li>
+</ol>
+<p>These are the accessibilityHazard values to look for.</p>
+<ul>
+<li>flashing</li>
+<li>motionSimulation</li>
+<li>sound</li>
+</ul></li>
+<li><p>Video has text Captions:</p></li>
+<li><p>Video has descriptive audio:</p></li>
+<li><p>Math contains MathML:</p></li>
+<li><p>This is an audio book: While technically accessible to many people with hearing loss, it would be useful to include information that it is an audio book.</p></li>
+</ol>
+<blockquote>
+<p>Avneesh: Should mention accessmodesufficient = auditory</p>
+</blockquote>
+<ol type="a">
+<li>Include: “This is an audio book and is intended for listening; the text of the publication is not present.”</li>
+</ol>
+<blockquote>
+<p>Madeleine: There may be books with both audio and text, so it could be that accessModeSufficient= auditory and also accessModeSufficient=textual.</p>
+</blockquote>
+<blockquote>
+<p>Avneesh: We can mention that point 5., 7., 8. and 9. can be interpreted from accessibilityFeature metadata. While point 6. has specific property, accessibilityHazards.</p>
+</blockquote>
+<h2 id="examples">Examples</h2>
+<pre><code>&lt;meta property=&quot;schema:accessibilitySummary&quot;&gt;
+    The publication contains structural and page navigation. All non-decorative images have alt text or captions, or are described in the surrounding text. The publication meets WCAG 2.0 Level AA.
+&lt;/meta&gt;</code></pre>
+<pre><code>&lt;meta property=&quot;schema:accessibilitySummary&quot;&gt;
+    This publication is screen reader friendly and is accessible to persons with disabilities. The publication was designed to be as accessible as possible to all persons with disabilities. It is compatible with the wide range of Assistive Technology on the market today. The built in features of most EPUB Reading Applications have accessibility features that may be used, e.g. read aloud is available in many Reading Apps. The publication meets the EPUB Accessibility requirements and it also meets the Web AccessibilityContent Guidelines (WCAG) at the double &quot;AA&quot; level.
+
+    Extensive navigation is provided to make it easy to use. The logos provided have alt text to identify what the logo represents. there are no other images. There are no accessibility hazards.
+
+    There are no video or audio recordings.
+&lt;/meta&gt;</code></pre>
+<p><code>accessibilityFeatures</code> we think we want to add reference to in the summary.</p>
+<ul>
+<li>alternativeText</li>
+<li>audioDescription</li>
+<li>captions</li>
+<li>describedMath</li>
+<li>longDescription</li>
+<li>MathML</li>
+<li>printPageNumbers</li>
+<li>readingOrder</li>
+<li>rubyAnnotations - Foreign Languages / Language Transitions</li>
+<li>structuralNavigation - (TOC)</li>
+<li>synchronizedAudioText - (Audio Book)</li>
+<li>tableOfContents</li>
+<li>tactileGraphic - (Sue-Ann how to reference in Ed Materials)</li>
+<li>tactileObject Same - DIAGRAM Meeting question.</li>
+<li>transcript</li>
+</ul>
+</body>
+</html>

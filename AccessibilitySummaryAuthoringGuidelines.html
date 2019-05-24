@@ -12,6 +12,7 @@
       span.smallcaps{font-variant: small-caps;}
       span.underline{text-decoration: underline;}
       div.column{display: inline-block; vertical-align: top; width: 50%;}
+      q { quotes: "“" "”" "‘" "’"; }
   </style>
   <!--[if lt IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
@@ -35,7 +36,7 @@
 <li><a href="#examples">Examples</a></li>
 </ul>
 <h2 id="introduction">Introduction</h2>
-<p>The EPUB Accessibility Conformance and Discovery Specification defines a schema.org metadata term called “accessibilitySummary.” This piece of metadata is extraordinarily unique and important in that it provides a human readable description of the accessibility of the publication. It is expected that people who do not have formal training in HTML, EPUB, or who are not experts in accessibility will be reading the accessibilitySummary. Online Library and retail catalogues should present the accessibilitySummary to assist in making the decision to purchase or recommend the title. Individuals, professors, schools and universities should be basing their decisions to purchase on the accessibility of products.</p>
+<p>The EPUB Accessibility Conformance and Discovery Specification defines a schema.org metadata term called <q>accessibilitySummary.</q> This piece of metadata is extraordinarily unique and important in that it provides a human readable description of the accessibility of the publication. It is expected that people who do not have formal training in HTML, EPUB, or who are not experts in accessibility will be reading the accessibilitySummary. Online Library and retail catalogues should present the accessibilitySummary to assist in making the decision to purchase or recommend the title. Individuals, professors, schools and universities should be basing their decisions to purchase on the accessibility of products.</p>
 <hr />
 <p><strong>Note</strong>: Please refer to the <a href="https://github.com/benetech/UX-Guide-EPUB-A11y-Metadata/blob/master/UXGuideForMetadata.md">Guidelines for discovery and presentation of EPUB Accessibility metadata</a> for libraries and retailers.</p>
 <hr />
@@ -58,18 +59,18 @@
 </blockquote>
 <p>Here is a list of areas that the summary should address :</p>
 <ol type="1">
-<li><p>Screen Reader Friendly: If all the text is present and there is alt text for important images, the <code>accessModeSufficient</code> would say “textual” or the <code>conformsTo</code> level reached will be WCAG-A or greater.</p>
+<li><p>Screen Reader Friendly: If all the text is present and there is alt text for important images, the <code>accessModeSufficient</code> would say <q>textual</q> or the <code>conformsTo</code> level reached will be WCAG-A or greater.</p>
 <ol type="a">
-<li>Include: “This title is screen reader friendly and it will be accessible to a person using text-to-speech or refreshable braille.”</li>
+<li>Include: <q>This title is screen reader friendly and it will be accessible to a person using text-to-speech or refreshable braille.</q></li>
 </ol></li>
 <li><p>Conforms to Accessibility Standards: The publication <code>conformsTo</code> the EPUB accessibility Specification at the WCAG 2 AA or A levels.</p>
 <ol type="a">
-<li>Include: “This publication meets accepted accessibility guidelines, i.e. EPUB 3 and Web Content Accessibility Guidelines (WCAG) at the AA level.” or “at the A level.” as appropriate.</li>
+<li>Include: <q>This publication meets accepted accessibility guidelines, i.e. EPUB 3 and Web Content Accessibility Guidelines (WCAG) at the AA level.</q> or <q>at the A level.</q> as appropriate.</li>
 </ol></li>
 <li><p>Structural navigation through the table of contents: Publications normally provide a structured table of contents. Educational materials often contain nested navigation to parts, chapters, sections, and sub-sections.</p>
 <ol type="a">
-<li><p>Include: “This publication contains a detailed table of contents for navigation through the various chapters and sections.”</p></li>
-<li><p>Include (if it is a simple TOC): “This publication contains access to the chapters through the table of contents.”</p></li>
+<li><p>Include: <q>This publication contains a detailed table of contents for navigation through the various chapters and sections.</q></p></li>
+<li><p>Include (if it is a simple TOC): <q>This publication contains access to the chapters through the table of contents.</q></p></li>
 </ol></li>
 </ol>
 <blockquote>
@@ -78,10 +79,10 @@
 <ol start="4" type="1">
 <li><p>Page numbers present: If there is a print equivalent version of this EPUB, the page numbers in the EPUB must be present; they will be navigable through the nav.xhtml (the table of contents).</p>
 <ol type="a">
-<li><p>Include: “Page numbers are present and navigation to pages is supported.”</p></li>
-<li><p>Include (if not present): “This publication does not contain page numbers that can be navigated.”</p></li>
-<li><p>Include (if no print equivalent): “There is no print version of this publication and no page navigation is provided.”</p></li>
-<li><p>Include (if virtual page numbers are present): “There is no print version of this publication, but virtual page numbers are provided for ease of use.”</p></li>
+<li><p>Include: <q>Page numbers are present and navigation to pages is supported.</q></p></li>
+<li><p>Include (if not present): <q>This publication does not contain page numbers that can be navigated.</q></p></li>
+<li><p>Include (if no print equivalent): <q>There is no print version of this publication and no page navigation is provided.</q></p></li>
+<li><p>Include (if virtual page numbers are present): <q>There is no print version of this publication, but virtual page numbers are provided for ease of use.</q></p></li>
 </ol></li>
 </ol>
 <blockquote>
@@ -96,14 +97,14 @@
 <ol start="5" type="1">
 <li><p>Extended descriptions: Extended (or long) descriptions are used when complex graphics or other highly visual components convey information. The extended description communicates the equivalent information through text, tables, etc.</p>
 <ol type="a">
-<li><p>Include: “Extended descriptions are provided for complex graphical content that conveys important information for understanding of the content.”</p></li>
-<li><p>Include (if not present): “This publication contains graphical content that conveys significant information. This graphical material is not explained and the reader who cannot interpret the graphics should seek assistance.”</p></li>
+<li><p>Include: <q>Extended descriptions are provided for complex graphical content that conveys important information for understanding of the content.</q></p></li>
+<li><p>Include (if not present): <q>This publication contains graphical content that conveys significant information. This graphical material is not explained and the reader who cannot interpret the graphics should seek assistance.</q></p></li>
 </ol></li>
 <li><p>Accessibility hazards: Some content, especially videos, may contain elements that have been found to be problematic. Most common items are motion effects that make some people motion sick, flashing that can cause severe distractions or even seizures, or loud sharp noises like a gunshot which can cause hearing issues. It is only necessary to include this information if it is present.</p>
 <ol type="a">
-<li><p>Include: “Caution: the video contains flashing lights.”</p></li>
-<li><p>Include: “Caution: the audio contains loud noises.”</p></li>
-<li><p>Include: “Caution: the video has motion, which may affect some people.”</p></li>
+<li><p>Include: <q>Caution: the video contains flashing lights.</q></p></li>
+<li><p>Include: <q>Caution: the audio contains loud noises.</q></p></li>
+<li><p>Include: <q>Caution: the video has motion, which may affect some people.</q></p></li>
 </ol>
 <p>These are the accessibilityHazard values to look for.</p>
 <ul>
@@ -120,7 +121,7 @@
 <p>Avneesh: Should mention accessmodesufficient = auditory</p>
 </blockquote>
 <ol type="a">
-<li>Include: “This is an audio book and is intended for listening; the text of the publication is not present.”</li>
+<li>Include: <q>This is an audio book and is intended for listening; the text of the publication is not present.</q></li>
 </ol>
 <blockquote>
 <p>Madeleine: There may be books with both audio and text, so it could be that accessModeSufficient= auditory and also accessModeSufficient=textual.</p>

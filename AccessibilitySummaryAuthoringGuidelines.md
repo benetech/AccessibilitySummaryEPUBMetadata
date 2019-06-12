@@ -48,11 +48,7 @@ EPUB Accessibility metadata](https://benetech.github.io/UX-Guide-EPUB-A11y-Metad
 
 ## Before you start writing
 
-The Accessibility Checker for EPUB (Ace by DAISY) should have been run
-against the publication, which evaluates the accessibility of the
-publication. Read the report that Ace generates.
-
-Madeleine: mention ACE as possible helper but focus on the metadata in the OPF file
+The [Accessibility Checker for EPUB (Ace by DAISY)](https://daisy.github.io/ace/) is a tool which can be used to help you determine some of the accessibility features within the publication which will help you determine what should be included in the accessibility Summary that will be put into the OPF file and or ONIX metadata feed.
 
 Next read the accessibility metadata in the EPUB package.opf file before
 you begin to write. Make note of the features listed in the metadata as

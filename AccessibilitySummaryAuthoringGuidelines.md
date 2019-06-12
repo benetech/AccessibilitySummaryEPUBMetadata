@@ -1,5 +1,5 @@
 ---
-title: AccessibilitySummary Authoring Guidelines
+title: Accessibility Summary Authoring Guidelines
 ...
 
 ## Status of This Document

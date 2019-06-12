@@ -157,26 +157,6 @@ Accessibility hazards: Some content, especially videos, may contain elements tha
 	There are no video or audio recordings.
 </meta>
 ```
-
-`accessibilityFeatures` we think we want to add reference to in the
-summary.
-
--   alternativeText
--   audioDescription
--   captions
--   describedMath
--   longDescription
--   MathML
--   printPageNumbers
--   readingOrder
--   rubyAnnotations - Foreign Languages / Language Transitions
--   structuralNavigation - (TOC)
--   synchronizedAudioText - (Audio Book)
--   tableOfContents
--   tactileGraphic - (Sue-Ann how to reference in Ed Materials)
--   tactileObject Same - DIAGRAM Meeting question.
--   transcript
-
 ---
 ## Acknowledgements
 

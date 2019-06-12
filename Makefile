@@ -3,4 +3,4 @@ exclusions=README.md
 sources=$(filter-out $(exclusions), $(wildcard *.md))
 all: $(sources:.md=.html)
 %.html : %.md
-	pandoc -s --html-q-tags $< -o $@
+	pandoc -c AccessibilitySummaryAuthoringGuidelines.css -s --html-q-tags $< -o $@

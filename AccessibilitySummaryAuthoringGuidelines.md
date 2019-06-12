@@ -48,7 +48,7 @@ EPUB Accessibility metadata](https://benetech.github.io/UX-Guide-EPUB-A11y-Metad
 
 ## Before you start writing
 
-The [Accessibility Checker for EPUB (Ace by DAISY)](https://daisy.github.io/ace/) is a tool which can be used to help you determine some of the accessibility features within the publication which will help you determine what should be included in the accessibility Summary that will be put into the OPF file and or ONIX metadata feed.
+The [Accessibility Checker for EPUB (Ace by DAISY)](https://daisy.github.io/ace/) is a tool which can be used to help you determine some of the accessibility features within the publication.  This information can be found when looking at the report.html file Ace creates. This will help you determine what should be included in the accessibilitySummary that will be put into the OPF file and/or ONIX metadata feed.
 
 Next read the accessibility metadata in the EPUB package.opf file before
 you begin to write. Make note of the features listed in the metadata as
@@ -68,9 +68,6 @@ available.
 - Include all accessibility features, even those detailed in another schema.org metadata item; remember that the AccessibilitySummary may be the only piece of metadata that some users read.
 - Templates may be a useful approach for creating accessibility summaries in your organization, especially if all the content of a similar type goes through the same workflow and quality assurance process. However, make sure that the `accessibilitySummary` metadata that ships with the publication is accurate and applies to this particular publication.
 
-Avneesh: Publishers would also need to know how to interpret
-accessibility metadata to create `accessibilitySummary`.
-
 ## What to Include in the `AccessibilitySummary`
 
 > Madeleine: Reformat as a table with 2 columns: metadata text and
@@ -79,79 +76,71 @@ notes?
 
 Here is a list of areas that the summary should address :
 
-1. Screen Reader Friendly: If all the text is present and there is alt text for important images, the `accessModeSufficient` would say "textual" or the `conformsTo` level reached will be WCAG-A or greater.
+### Accessibility Conformance Statement
+| Metadata Value(s) Present | Suggested summary | Information |
+| --------------- |-------------------|------------------------------|
+| *conformsTo* = *'http://www.idpf.org/epub/a11y/accessibility-20170105.html#wcag-a'*| This publication meets accepted accessibility guidelines (WCAG-A)|WCAG-A Compliance|
+| *conformsTo* = *'http://www.idpf.org/epub/a11y/accessibility-20170105.html#wcag-aa'*| This publication meets accepted accessibility guidelines (WCAG-AA)|WCAG-AA Compliance|
 
-	a. Include: "This title is screen reader friendly and it will be accessible to a person using text-to-speech or refreshable braille."
+### Screen Reader Friendly
+| Metadata Value(s) Present | Suggested summary | Information |
+| --------------- |-------------------|------------------------------|
+| *accessModeSufficient* = *'textual'* and *conformsTo* of *WCAG-A* or greater| This title is screen reader friendly and it will be accessible to a person using text-to-speech or refreshable braille. |Can this EPUB be entirely read by a Screen Reader, i.e. all visual only information has a meaningful text equivalent.|
 
-2. Conforms to Accessibility Standards: The publication `conformsTo` the EPUB accessibility Specification at the WCAG 2 AA or A levels.
-
-    a. Include: "This publication meets accepted accessibility guidelines, i.e. EPUB 3 and Web Content Accessibility Guidelines (WCAG) at the AA level." or "at the A level." as appropriate.
-
-3. Structural navigation through the table of contents: Publications normally provide a structured table of contents. Educational materials often contain nested navigation to parts, chapters, sections, and sub-sections.
-
-    a. Include: "This publication contains a detailed table of contents for navigation through the various chapters and sections."
-
-    b. Include (if it is a simple TOC): "This publication contains access to the chapters through the table of contents."
-
-> Avneesh::How are we expecting the publisher or distributor to get this information. We should provide a hint that Ace will extract table of content that can be reviewed. The second piece of information is accessibilityfeature metadata, it can have value for table of contents.
-
-4. Page numbers present: If there is a print equivalent version of this EPUB, the page numbers in the EPUB must be present; they will be navigable through the nav.xhtml (the table of contents).
-
-    a. Include: "Page numbers are present and navigation to pages is supported."
-
-    b. Include (if not present): "This publication does not contain page numbers that can be navigated."
-
-    c. Include (if no print equivalent): "There is no print version of this publication and no page navigation is provided."
-
-    d. Include (if virtual page numbers are present): "There is no print version of this publication, but virtual page numbers are provided for ease of use."
-
-> Avneesh: First is the confusion between page numbers inside the book and
-page view provided by the reading system. It should be made clear here.
-
-> 2nd is definition of virtual page numbers. It may be unknown term form
-some of the audience.
-
-> 3rd is how to interpret if there is a print equivalent, we should inform
-that there is dc:source metadata for it. Also accessibilityfeature has a
-value for printPageNumbers.
-
-5. Extended descriptions: Extended (or long) descriptions are used when complex graphics or other highly visual components convey information. The extended description communicates the equivalent information through text, tables, etc.
-
-    a. Include: "Extended descriptions are provided for complex graphical content that conveys important information for understanding of the content."
-
-    b. Include (if not present): "This publication contains graphical content that conveys significant information. This graphical material is not explained and the reader who cannot interpret the graphics should seek assistance."
-
-6. Accessibility hazards: Some content, especially videos, may contain elements that have been found to be problematic. Most common items are motion effects that make some people motion sick, flashing that can cause severe distractions or even seizures, or loud sharp noises like a gunshot which can cause hearing issues. It is only necessary to include this information if it is present.
-
-    a. Include: "Caution: the video contains flashing lights."
-
-    b. Include: "Caution: the audio contains loud noises."
-
-    c. Include: "Caution: the video has motion, which may affect some people."
-
-	These are the accessibilityHazard values to look for.
-	
-	- flashing
-	- motionSimulation
-	- sound
-
-7.  Video has text Captions:
-
-8.  Video has descriptive audio:
-
-9.  Math contains MathML:
-
-10. This is an audio book: While technically accessible to many people with hearing loss, it would be useful to include information that it is an audio book.
-
-> Avneesh: Should mention accessmodesufficient = auditory
-
-   a. Include: "This is an audio book and is intended for listening; the text of the publication is not present."
-	
+### Audio Book
+| Metadata Value(s) Present | Suggested summary | Information |
+| --------------- |-------------------|------------------------------|
+| *accessModeSufficient* = *'auditory'*|||
 > Madeleine: There may be books with both audio and text, so it could be that accessModeSufficient= auditory and also accessModeSufficient=textual.
 
-> Avneesh: We can mention that point 5., 7., 8. and 9. can be interpreted
-from accessibilityFeature metadata. While point 6. has specific
-property, accessibilityHazards.
+
+
+### Accessibility Features
+| Metadata Value(s) Present | Suggested summary | Information |
+| --------------- |-------------------|------------------------------|
+|*accessibilityFeature* = *'alternativeText'*|||
+|*accessibilityFeature* = *'annotations'*|||
+|*accessibilityFeature* = *'audioDescription'*|Video has Descriptive Audio||
+|*accessibilityFeature* = *'bookmarks'*|||
+|*accessibilityFeature* = *'braille'*|||
+|*accessibilityFeature* = *'captions'*|Video has text Captions||
+|*accessibilityFeature* = *'ChemML'*|||
+|*accessibilityFeature* = *'describedMath'*|||
+|*accessibilityFeature* = *'displayTransformability'*|||
+|*accessibilityFeature* = *'highContrastAudio'*|||
+|*accessibilityFeature* = *'highContrastDisplay'*|||
+|*accessibilityFeature* = *'index'*|||
+|*accessibilityFeature* = *'largePrint'*|||
+|*accessibilityFeature* = *'latex'*|||
+|*accessibilityFeature* = *'longDescription'*|Extended descriptions are provided for complex graphical content that conveys important information for understanding of the content.|Extended descriptions: Extended (or long) descriptions are used when complex graphics or other highly visual components convey information. The extended description communicates the equivalent information through text, tables, etc.|
+|*accessibilityFeature* of *'longDescription'* is missing|This publication contains graphical content that conveys significant information. This graphical material is not explained and the reader who cannot interpret the graphics should seek assistance.|Extended Descriptions are not provided when needed, for example if there is a complex image that needs a longer description to understand what the image is protraying.|
+|*accessibilityFeature* = *'MathML'*|Math represented by MathML||
+|*accessibilityFeature* = *'none'*|@@ - Include this? I don't see how this could be possible.||
+|*accessibilityFeature* = *'printPageNumbers'* and *dc:source* is present|Page numbers are present and navigation to pages is supported.|Page navigation provided and matches the print book|
+|*accessibilityFeature* = *'printPageNumbers'* and *dc:source* is not present or refers to this EPUB|There is no print version of this publication, but digital page numbers are provided for ease of use.|Page navigation provided but no equivalent print book.  Since there is no print equivalent book these page breaks are set by the publisher to aid in navigating to a specific digital or "virtual" page within the EPUB.|
+|*accessibilityFeature* of *'printPageNumbers'* is missing|This publication does not contain page numbers that can be navigated.|No page navigation provided|
+|*accessibilityFeature* = *'readingOrder'*|||
+|*accessibilityFeature* = *'rubyAnnotations'*|||
+|*accessibilityFeature* = *'signLanguage'*|||
+|*accessibilityFeature* = *'structuralNavigation'* and *'tableOfContents'*|This publication contains a  table of contents for navigation through the various chapters and sections.|Table of Content Navigation|
+|*accessibilityFeature* = *'synchronizedAudioText'*|||
+|*accessibilityFeature* = *'tactileGraphic'*|||
+|*accessibilityFeature* = *'tactileObject'*|||
+|*accessibilityFeature* = *'timingControl'*|||
+|*accessibilityFeature* = *'transcript'*|||
+|*accessibilityFeature* = *'ttsMarkup'*|||
+|*accessibilityFeature* = *'unlocked'*|@@ - Include this? This may not be under Publisher control||
+
+### Accessibility Hazards
+Accessibility hazards: Some content, especially videos, may contain elements that have been found to be problematic. Most common items are motion effects that make some people motion sick, flashing that can cause severe distractions or even seizures, or loud sharp noises like a gunshot which can cause hearing issues. It is only necessary to include this information if it is present.
+
+| Metadata Value(s) Present | Suggested summary | Information |
+| --------------- |-------------------|------------------------------|
+|*accessibilityHazard* = *'flashing'*|Caution: the video contains flashing lights.|Flashing Hazard|
+|*accessibilityHazard* = *'sound'*|Caution: the audio contains loud noises.|Sound Hazard|
+|*accessibilityHazard* = *'motionSimulation'*|Caution: the video has motion, which may affect some people.|Motion Simulation Hazard|
+
+
 
 ## Examples
 

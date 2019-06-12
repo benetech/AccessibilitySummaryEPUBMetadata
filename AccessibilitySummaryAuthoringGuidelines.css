@@ -1,0 +1,26 @@
+table {
+     border-collapse: collapse;
+     width: 95%;
+     margin-left: 2%;
+   }
+
+   th[scope|="col"] {width: 40%;}
+
+   th, td {
+     padding: 4px;
+     margin: 4px;
+     text-align: left;
+     border: 1px solid #ccc;
+   }
+
+     th {
+       text-align: center;
+     }
+
+     tbody td:nth-child(2) {
+       text-align: left;
+     }
+
+   tbody tr:nth-child(odd) {
+     background: #eee;
+   }

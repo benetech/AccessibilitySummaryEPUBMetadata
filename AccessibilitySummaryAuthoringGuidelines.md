@@ -1,14 +1,16 @@
 ---
 title: AccessibilitySummary Authoring Guidelines
-author: George Kerscher
-date: April 17, 2019
 ...
 
-> Sarah Runcie: Hi all - I do have a comment from the perspective of a
-non-accessibility guru. It would be good to have clearly stated for
-publishers (or anyone using this as a guide) as to where this metadata
-sits. Otherwise it becomes the very good advice you just can't take. ;
-)
+## Status of This Document
+Editors Draft - Version 0.9 (06/12/2019)
+
+This document is published by the DIAGRAM Center Standards Working Group and DAISY's Transition to EPUB Working group as an Editor's Draft.
+
+Comments regarding this document are welcome. Please [file an issue using our GitHub repository issue tracker](https://github.com/benetech/AccessibilitySummaryEPUBMetadata/issues).
+
+---
+
 
 ## Table of Contents
 
@@ -17,13 +19,13 @@ sits. Otherwise it becomes the very good advice you just can't take. ;
 - [Some High-Level Considerations](#some-high-level-considerations)
 - [What to Include in the `AccessibilitySummary`](#what-to-include-in-the-accessibilitysummary)
 - [Examples](#examples)
-
+- [Acknowledgements](#acknowledgements)
 
 ## Introduction
 
-The EPUB Accessibility Conformance and Discovery Specification defines a
-schema.org metadata term called "accessibilitySummary." This piece of
-metadata is extraordinarily unique and important in that it provides a
+The [EPUB Accessibility Conformance and Discovery Specification defines a
+schema.org metadata term called "accessibilitySummary."](http://www.idpf.org/epub/a11y/#sec-disc-package) 
+This piece of metadata is extraordinarily unique and important in that it provides a
 human readable description of the accessibility of the publication. It
 is expected that people who do not have formal training in HTML, EPUB,
 or who are not experts in accessibility will be reading the
@@ -33,10 +35,14 @@ purchase or recommend the title. Individuals, professors, schools and
 universities should be basing their decisions to purchase on the
 accessibility of products.
 
+The metadata accessibilitySummary can be found in either of two places, inside the EPUB in the OPF file, or this information can be retrieved from ONIX [code list:
+196](https://ns.editeur.org/onix/en/196); Code: 00:
+Accessibility Summary.
+
 ---
 
 **Note**: Please refer to the [Guidelines for discovery and presentation of
-EPUB Accessibility metadata](https://github.com/benetech/UX-Guide-EPUB-A11y-Metadata/blob/master/UXGuideForMetadata.md) for libraries and retailers.
+EPUB Accessibility metadata](https://benetech.github.io/UX-Guide-EPUB-A11y-Metadata/UXGuideForMetadata.html) for libraries and retailers.
 
 ---
 
@@ -187,3 +193,19 @@ summary.
 -   tactileGraphic - (Sue-Ann how to reference in Ed Materials)
 -   tactileObject Same - DIAGRAM Meeting question.
 -   transcript
+
+---
+## Acknowledgements
+
+### Editors
+* George Kerscher
+* Charles LaPierre
+* Gregorio Pellegrino
+
+### Contributors
+* Avneesh Singh
+* Jason White
+* Madeleine Rothberg
+* Sarah Runcie
+
+

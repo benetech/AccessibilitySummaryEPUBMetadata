@@ -70,10 +70,6 @@ available.
 
 ## What to Include in the `AccessibilitySummary`
 
-> Madeleine: Reformat as a table with 2 columns: metadata text and
-suggested prose for summary. Third column for links to explanatory
-notes?
-
 Here is a list of areas that the summary should address :
 
 ### Accessibility Conformance Statement

@@ -91,9 +91,7 @@ Here is a list of areas that the summary should address :
 | Metadata Value(s) Present | Suggested summary | Information |
 | --------------- |-------------------|------------------------------|
 | *accessModeSufficient* = *'auditory'*|||
-> Madeleine: There may be books with both audio and text, so it could be that accessModeSufficient= auditory and also accessModeSufficient=textual.
-
-
+| *accessModeSufficient* = *'auditory'* and *accessModeSufficient* = *'textual'|||
 
 ### Accessibility Features
 | Metadata Value(s) Present | Suggested summary | Information |

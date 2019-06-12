@@ -94,10 +94,10 @@ Here is a list of areas that the summary should address :
 | --------------- |-------------------|------------------------------|
 |*accessibilityFeature* = *'alternativeText'*|||
 |*accessibilityFeature* = *'annotations'*|||
-|*accessibilityFeature* = *'audioDescription'*|Video has Descriptive Audio||
+|*accessibilityFeature* = *'audioDescription'*|Video has descriptive audio.||
 |*accessibilityFeature* = *'bookmarks'*|||
 |*accessibilityFeature* = *'braille'*|||
-|*accessibilityFeature* = *'captions'*|Video has text Captions||
+|*accessibilityFeature* = *'captions'*|Video has text captions.||
 |*accessibilityFeature* = *'ChemML'*|||
 |*accessibilityFeature* = *'describedMath'*|||
 |*accessibilityFeature* = *'displayTransformability'*|||
@@ -121,7 +121,7 @@ Here is a list of areas that the summary should address :
 |*accessibilityFeature* = *'tactileGraphic'*|||
 |*accessibilityFeature* = *'tactileObject'*|||
 |*accessibilityFeature* = *'timingControl'*|||
-|*accessibilityFeature* = *'transcript'*|||
+|*accessibilityFeature* = *'transcript'*|Video has a transcript.||
 |*accessibilityFeature* = *'ttsMarkup'*|||
 |*accessibilityFeature* = *'unlocked'*|@@ - Include this? This may not be under Publisher control||
 
